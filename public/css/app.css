@@ -10944,3 +10944,16 @@ a.text-dark:focus {
   }
 }
 
+.react-pagination ul {
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+
+.react-pagination li {
+  display: inline-block;
+  padding: 10px;
+  border: #1b1e21 1px solid;
+}
+

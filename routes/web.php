@@ -14,4 +14,3 @@
 Route::get('/', 'CardController@viewCards');
 Route::post('/', 'CardController@getCards');
 
-

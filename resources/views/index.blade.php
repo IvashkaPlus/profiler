@@ -7,7 +7,7 @@
         <title>Profiler</title>
     </head>
     <body>
-        <div id="root">
+        <div id="react-card-list">
 
         </div>
         <script src="{{mix('js/app.js')}}" ></script>
