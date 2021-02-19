@@ -17,24 +17,24 @@ class CardController extends Controller
         $path = storage_path() . "\data.json";
         $json = json_decode(file_get_contents($path), true);
         $current_page = LengthAwarePaginator::resolveCurrentPage();
-//        dd($json);
         $per_page = 4;
         $data_collection = new Collection($json);
         $page_data = array_slice($json, ($current_page - 1) * $per_page, $per_page);
-//        $page_data = $data_collection->slice(($current_page - 1) * $per_page, $per_page)->all();
-
         $info = new LengthAwarePaginator($page_data, count($data_collection), $per_page);
 
-//        if ($info->currentPage() > 1){
-//            $data_array = get_object_vars($info->items());
-//            $data_array = $info ->items();
-//            dd(gettype($data_array));
-//        } else {
-//            $data_array = $info ->items();
-//        }
-//        dd($info->items());
 
         return $info;
+    }
+
+    public function getCard(string $id){
+        $path = storage_path() . "\data.json";
+        $json = json_decode(file_get_contents($path), true);
+        for($i = 0; $i < count($json); $i++){
+            if($json[$i]['ObjectID']['$oid'] == $id){
+                return view('card', ['card' => $json[$i]]);
+            }
+        }
+        return abort(404);
     }
 
 

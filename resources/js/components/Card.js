@@ -2,7 +2,7 @@ import React from 'react';
 
 const Card = (props) => {
 
-    const card_href = "/get/?id=" + props.card.ObjectID["$oid"];
+    const card_href = "/get/" + props.card.ObjectID["$oid"];
     const card_name = props.card.first_name + " " + props.card.last_name;
 
     return(
@@ -11,7 +11,6 @@ const Card = (props) => {
                 <img className="card-img-top" src={props.card.avatar} alt={card_name} />
                     <div className="card-body">
                         <h5 className="card-title">Имя: {card_name}</h5>
-                        <p className="card-text">Город: {props.card.city}</p>
                         <a href={card_href} className="btn btn-primary">Открыть карточку</a>
                     </div>
             </div>

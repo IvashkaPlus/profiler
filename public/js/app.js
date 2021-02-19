@@ -66661,7 +66661,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Card = function Card(props) {
-  var card_href = "/get/?id=" + props.card.ObjectID["$oid"];
+  var card_href = "/get/" + props.card.ObjectID["$oid"];
   var card_name = props.card.first_name + " " + props.card.last_name;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-3"
@@ -66675,9 +66675,7 @@ var Card = function Card(props) {
     className: "card-body"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
     className: "card-title"
-  }, "\u0418\u043C\u044F: ", card_name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "card-text"
-  }, "\u0413\u043E\u0440\u043E\u0434: ", props.card.city), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, "\u0418\u043C\u044F: ", card_name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: card_href,
     className: "btn btn-primary"
   }, "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u043A\u0430\u0440\u0442\u043E\u0447\u043A\u0443"))));

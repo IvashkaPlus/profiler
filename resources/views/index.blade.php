@@ -9,7 +9,7 @@
     <body>
         <div id="react-card-list">
 
-        </div>
+        </div>>
         <script src="{{mix('js/app.js')}}" ></script>
     </body>
 </html>

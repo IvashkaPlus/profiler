@@ -13,4 +13,5 @@
 
 Route::get('/', 'CardController@viewCards');
 Route::post('/', 'CardController@getCards');
+Route::get('/get/{id}', 'CardController@getCard');
 
